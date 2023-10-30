@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <meta name="description" content=""/>
+    <meta name="author" content=""/>
+    <title>Личный кабинет - Skillbox Market</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="../static/assets/favicon.ico"/>
+    <!-- Bootstrap icons-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet"/>
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="../static/css/styles.css" rel="stylesheet"/>
+</head>
+<body>
+<!-- Navigation-->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container px-4 px-lg-5">
+        <a class="navbar-brand" href="../index.html">Skillbox Makret</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span
+                class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="../index.html">
+                        Главная
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../products/catalog.html">
+                        Каталог
+                    </a>
+                </li>
+            </ul>
+            <div class="d-flex gap-2">
+                <a href="../users/login.html" class="btn btn-outline-light">
+                    <i class="bi bi-box-arrow-in-right"></i>
+                </a>
+                <a href="../products/comparison.html" class="btn btn-outline-light">
+                    <i class="bi bi-arrow-left-right"></i>
+                </a>
+                <div class="dropdown">
+                    <button class="btn btn-outline-light dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                        <i class="bi bi-person-circle"></i>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a class="dropdown-item" href="profile.html">
+                                Личный кабинет
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">
+                                Выйти
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">
+                                Административный раздел
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <a href="../orders/cart.html" class="btn btn-outline-light">
+                    <i class="bi-cart-fill me-1"></i>
+                    Корзина
+                    <span class="badge bg-light text-dark ms-1 rounded-pill">3</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</nav>
+<!-- Profile section-->
+<section>
+    <div class="container px-4 px-lg-5 my-5">
+        <div class="row gx-4 gx-lg-5">
+            <div class="col-md-7 mb-5">
+                <div class="row justify-content-center">
+                    <div class="col-5 col-md-4 col-lg-3">
+                        <div class="mb-4">
+                            <img src="../static/images/avatar.png" class="img-fluid rounded" alt="...">
+                        </div>
+                    </div>
+                </div>
+                <!--
+                    More info about validation here:
+                    https://getbootstrap.com/docs/5.3/forms/validation/#server-side
+                -->
+                <form action="">
+                    <div class="mb-3">
+                        <label for="userImage" class="form-label visually-hidden"></label>
+                        <input class="form-control" type="file" id="userImage">
+                    </div>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="userEmail">Эл. почта</span>
+                        <input type="email" class="form-control" aria-label="userEmail" value="example@mail.com"
+                               readonly>
+                    </div>
+                    <div class="input-group mb-4">
+                        <span class="input-group-text">Имя и фамилия</span>
+                        <input type="text" aria-label="First name" class="form-control" value="Иван">
+                        <input type="text" aria-label="Last name" class="form-control" value="Иванов">
+                    </div>
+                    <div class="alert alert-info alert-dismissible fade show" role="alert">
+                        Повторное письмо выслано на адрес <strong>example@mail.com</strong>.
+                        Пожалуйста, проверьте почту и подтвердите вашу учетную запись.
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                    <div class="alert alert-warning" role="alert">
+                        Адрес электронной почты не подтвержден.
+                        <small>
+                            <a href="#" style="text-decoration: none;">
+                                Выслать письмо повторно.
+                            </a>
+                        </small>
+                    </div>
+                    <hr>
+                    <p><small>Детали доставки</small></p>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text">Город</span>
+                        <input type="text" aria-label="City" class="form-control" placeholder="Москва">
+                    </div>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text">Адрес</span>
+                        <input type="text" aria-label="Address" class="form-control"
+                               placeholder="ул. Мира, дом 25, подъезд 1, кв. 13, 600138">
+                    </div>
+                    <div class="input-group mb-4">
+                        <span class="input-group-text"><i class="bi bi-telephone-fill"></i></span>
+                        <input type="text" class="form-control is-invalid" placeholder="+ 7 (918) 123 50 18"
+                               aria-label="userPhone"
+                               aria-describedby="validationServerPhone">
+                        <div id="validationServerPhone" class="invalid-feedback">
+                            Пожалуйста, введите номер телефона в нужном формате.
+                        </div>
+                    </div>
+                    <div class="alert alert-success alert-dismissible fade show" role="alert">
+                        Данные сохранены.
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                    <hr>
+                    <div>
+                        <button type="submit" class="btn btn-outline-dark">Сохранить</button>
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-5">
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title">Заказ 2345</h5>
+                        <h6 class="card-subtitle mb-4 text-body-secondary">21 сентября 2023 г.</h6>
+                        <p class="card-text"><strong>Доставляется</strong></p>
+                        <p class="card-text"><strong>1 000 ₽</strong></p>
+                        <a href="../orders/order.html" class="card-link text-dark">Подробнее</a>
+                    </div>
+                </div>
+                <div class="card mb-5">
+                    <div class="card-header">
+                        Предыдущие заказы
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item list-group-item-primary">
+                            <strong>
+                                <a href="../orders/order.html" class="text-dark" style="text-decoration: none;">
+                                    № 1452 от 1 августа 2023</a>
+                            </strong>
+                        </li>
+                        <li class="list-group-item list-group-item-success">
+                            <strong>
+                                <a href="../orders/order.html" class="text-dark" style="text-decoration: none;">
+                                    № 1321 от 17 июля 2023</a>
+                            </strong>
+                        </li>
+                        <li class="list-group-item">
+                            <strong>
+                                <a href="../orders/order.html" class="text-dark" style="text-decoration: none;">
+                                    № 1212 от 5 июля 2023</a>
+                            </strong>
+                        </li>
+                    </ul>
+                </div>
+                <div class="row">
+                    <p class="h4">История просмотров</p>
+                </div>
+                <div class="row row-cols-1 row-cols-md-2 mt-3">
+                    <div class="col mb-3">
+                        <div class="card h-100">
+                            <a href="../products/product.html">
+                                <img src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" class="card-img-top"
+                                     alt="...">
+                            </a>
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                    <a class="text-dark" href="../products/product.html" style="text-decoration: none;">
+                                        Дождевик Komfi
+                                    </a>
+                                </h5>
+                                <p class="card-text">
+                                    699 ₽
+                                </p>
+                            </div>
+                            <div class="card-footer text-secondary">
+                                сегодня
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-3">
+                        <div class="card h-100">
+                            <a href="../products/product.html">
+                                <img src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" class="card-img-top"
+                                     alt="...">
+                            </a>
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                    <a class="text-dark" href="../products/product.html" style="text-decoration: none;">
+                                        Кроссовки New Balance
+                                    </a>
+                                </h5>
+                                <p class="card-text">
+                                    11 900 ₽
+                                </p>
+                            </div>
+                            <div class="card-footer text-secondary">
+                                2 дня назад
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row row-cols-1 mt-3">
+                    <div class="col">
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-sm btn-dark w-100" data-bs-toggle="modal"
+                                data-bs-target="#historyModal">
+                            Подробнее
+                        </button>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="historyModal" tabindex="-1" aria-labelledby="historyModalLabel"
+                             aria-hidden="true">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title fs-5" id="historyModalLabel">История просмотров</h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <table class="table table-borderless">
+                                            <tbody>
+                                            <tr>
+                                                <th scope="row">
+                                                    <a href="../products/product.html" class="text-dark">
+                                                        Дождевик Komfi
+                                                    </a>
+                                                </th>
+                                                <td>699 ₽</td>
+                                                <td>сегодня</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">
+                                                    <a href="../products/product.html" class="text-dark">
+                                                        Кроссовки New Balance
+                                                    </a>
+                                                </th>
+                                                <td>11 900 ₽</td>
+                                                <td>сегодня</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">
+                                                    <a href="../products/product.html" class="text-dark">
+                                                        Солнцезащитные очки Xiaomi
+                                                    </a>
+                                                </th>
+                                                <td>1 043 ₽</td>
+                                                <td>вчера</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">
+                                                    <a href="../products/product.html" class="text-dark">
+                                                        Матрас Corretto Bella
+                                                    </a>
+                                                </th>
+                                                <td>8 865 ₽</td>
+                                                <td>2 дня назад</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">
+                                                    <a href="../products/product.html" class="text-dark">
+                                                        Робот-пылесос Xiaomi Robot Vacuum E10
+                                                    </a>
+                                                </th>
+                                                <td>13 447 ₽</td>
+                                                <td>5 дней назад</td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                                            Закрыть
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Footer-->
+<footer class="py-5 bg-dark">
+    <div class="container"><p class="m-0 text-center text-white">Copyright &copy; Skillbox Market 2023</p></div>
+</footer>
+<!-- Bootstrap core JS-->
+<!-- Bootstrap core JS-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Core theme JS-->
+<script src="../static/js/scripts.js"></script>
+</body>
+</html>

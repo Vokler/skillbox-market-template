@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <meta name="description" content=""/>
+    <meta name="author" content=""/>
+    <title>Каталог - Skillbox Market</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="../static/assets/favicon.ico"/>
+    <!-- Bootstrap icons-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet"/>
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="../static/css/styles.css" rel="stylesheet"/>
+    <!-- Custom CSS-->
+    <link href="../static/css/custom-style.css" rel="stylesheet"/>
+</head>
+<body>
+<!-- Navigation-->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-5">
+    <div class="container px-4 px-lg-5">
+        <a class="navbar-brand" href="../index.html">Skillbox Makret</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span
+                class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="../index.html">
+                        Главная
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="catalog.html">
+                        Каталог
+                    </a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button"
+                       data-bs-toggle="dropdown" aria-expanded="false">
+                        Категории
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="catalog.html">Телевизор</a></li>
+                        <li><a class="dropdown-item" href="catalog.html">Наушники</a></li>
+                        <li><a class="dropdown-item" href="catalog.html">Телефоны</a></li>
+                        <li>
+                            <a class="dropdown-item" href="#">
+                                Мебель <i class="bi bi-chevron-right float-end"></i>
+                            </a>
+                            <ul class="dropdown-menu dropdown-submenu">
+                                <li>
+                                    <a class="dropdown-item" href="catalog.html">Диваны и кушетки</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="catalog.html">Кресла</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a class="dropdown-item" href="catalog.html">Аптека</a></li>
+                        <li>
+                            <a class="dropdown-item" href="catalog.html">
+                                Оптика <i class="bi bi-chevron-right float-end"></i>
+                            </a>
+                            <ul class="dropdown-menu dropdown-submenu">
+                                <li>
+                                    <a class="dropdown-item" href="catalog.html">Ежедневные линзы</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="catalog.html">Цветные линзы</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="catalog.html">Квартальные линзы</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="d-flex gap-2">
+                <a href="../users/login.html" class="btn btn-outline-light">
+                    <i class="bi bi-box-arrow-in-right"></i>
+                </a>
+                <a href="../products/comparison.html" class="btn btn-outline-light">
+                    <i class="bi bi-arrow-left-right"></i>
+                </a>
+                <div class="dropdown">
+                    <button class="btn btn-outline-light dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                        <i class="bi bi-person-circle"></i>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a class="dropdown-item" href="../users/profile.html">
+                                Личный кабинет
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">
+                                Выйти
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">
+                                Административный раздел
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <a href="../orders/cart.html" class="btn btn-outline-light">
+                    <i class="bi-cart-fill me-1"></i>
+                    Корзина
+                    <span class="badge bg-light text-dark ms-1 rounded-pill">3</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</nav>
+<!-- Section-->
+<section>
+    <div class="container">
+        <div class="row">
+            <!-- Filters-->
+            <div class="col-xl-3">
+                <!-- Search filter-->
+                <div class="card mb-4">
+                    <div class="card-header">Фильтр</div>
+                    <div class="card-body">
+                        <form>
+                            <div class="input-group mb-3">
+                                <input class="form-control" type="text" placeholder="Название"
+                                       aria-label="Название" aria-describedby="button-search"/>
+                            </div>
+                            <div class="input-group mb-3">
+                                <span class="input-group-text">Цена, ₽</span>
+                                <input type="text" aria-label="start price" class="form-control" placeholder="от 1 000">
+                                <input type="text" aria-label="end price" class="form-control" placeholder="до 3 000">
+                            </div>
+                            <div class="input-group mb-3">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="isOnStore">
+                                    <label class="form-check-label" for="isOnStore">
+                                        В наличии
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="input-group mb-3">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="isFreeDelivery">
+                                    <label class="form-check-label" for="isFreeDelivery">
+                                        Бесплатная доставка
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="input-group">
+                                <button class="btn btn-dark" type="submit">
+                                    Найти
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!-- Product section-->
+            <div class="col-xl-9">
+                <!-- Sorting -->
+                <div class="row">
+                    <div class="d-flex flex-row text-center">
+                        <div class="px-2 pb-4 pt-0">
+                            <a href="#" class="text-secondary link-secondary" style="text-decoration: none;">
+                                по популярности
+                            </a>
+                        </div>
+                        <div class="p-2 pt-0">
+                            <a href="#" class="text-dark link-dark" style="text-decoration: none;">
+                                по цене
+                                <!-- <i class="bi bi-sort-down-alt"></i> -->
+                                <i class="bi bi-sort-up-alt"></i>
+                            </a>
+                        </div>
+                        <div class="p-2 pt-0">
+                            <a href="#" class="text-secondary link-secondary" style="text-decoration: none;">
+                                по отзывам
+                            </a>
+                        </div>
+                        <div class="p-2 pt-0">
+                            <a href="#" class="text-secondary link-secondary" style="text-decoration: none;">
+                                по новизне
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product cards-->
+                <div class="row gx-4 gx-lg-5 row-cols-1 row-cols-md-3 row-cols-xl-3">
+                    <div class="col mb-5">
+                        <div class="card h-100">
+                            <!-- Compare badge-->
+                            <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">
+                                <a href="#" style="text-decoration: none;" class="text-white">
+                                    <i class="bi bi-arrow-left-right"></i>
+                                </a>
+                            </div>
+                            <!-- Product image-->
+                            <a href="product.html">
+                                <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg"
+                                     alt="..."/>
+                            </a>
+                            <div class="card-body">
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <h5 class="fw-bolder">
+                                        <a href="product.html" class="text-black" style="text-decoration: none;">
+                                            Дождевик Komfi
+                                        </a>
+                                    </h5>
+                                    <!-- Product price-->
+                                    <a href="product.html" class="text-black" style="text-decoration: none;">
+                                        699 ₽
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- Product actions-->
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <div class="text-center">
+                                    <a class="btn btn-outline-dark mt-auto" href="#">
+                                        Добавить в корзину
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-5">
+                        <div class="card h-100">
+                            <!-- Compare badge-->
+                            <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">
+                                <a href="#" style="text-decoration: none;" class="text-white">
+                                    <i class="bi bi-arrow-left-right"></i>
+                                </a>
+                            </div>
+                            <!-- Product image-->
+                            <a href="product.html">
+                                <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg"
+                                     alt="..."/>
+                            </a>
+                            <div class="card-body">
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <h5 class="fw-bolder">
+                                        <a href="product.html" class="text-black" style="text-decoration: none;">
+                                            Виниловый проигрыватель Pro-Ject THE BEATLES
+                                        </a>
+                                    </h5>
+                                    <!-- Product price-->
+                                    <a href="product.html" class="text-black" style="text-decoration: none;">
+                                        62 000 ₽
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- Product actions-->
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <div class="text-center">
+                                    <a class="btn btn-outline-dark mt-auto" href="#">
+                                        Добавить в корзину
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-5">
+                        <div class="card h-100">
+                            <!-- Compare badge-->
+                            <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">
+                                <a href="#" style="text-decoration: none;" class="text-white">
+                                    <i class="bi bi-arrow-left-right"></i>
+                                </a>
+                            </div>
+                            <!-- Sale badge-->
+                            <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 3.0rem">
+                                Sale
+                            </div>
+                            <!-- Product image-->
+                            <a href="product.html">
+                                <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg"
+                                     alt="..."/>
+                            </a>
+                            <!-- Product details-->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <h5 class="fw-bolder">
+                                        <a href="product.html" class="text-black" style="text-decoration: none;">
+                                            Кроссовки New Balance
+                                        </a>
+                                    </h5>
+                                    <!-- Product price-->
+                                    <a href="product.html" class="text-black" style="text-decoration: none;">
+                                        <span class="text-muted text-decoration-line-through">16 856 ₽</span>
+                                        11 900 ₽
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- Product actions-->
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <div class="text-center">
+                                    <a class="btn btn-outline-dark mt-auto" href="#">
+                                        Добавить в корзину
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-5">
+                        <div class="card h-100">
+                            <!-- Compare badge-->
+                            <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">
+                                <a href="#" style="text-decoration: none;" class="text-white">
+                                    <i class="bi bi-arrow-left-right"></i>
+                                </a>
+                            </div>
+                            <!-- Sale badge-->
+                            <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 3.0rem">
+                                Sale
+                            </div>
+                            <!-- Product image-->
+                            <a href="product.html">
+                                <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg"
+                                     alt="..."/>
+                            </a>
+                            <!-- Product details-->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <h5 class="fw-bolder">
+                                        <a href="product.html" class="text-black" style="text-decoration: none;">
+                                            Солнцезащитные очки Xiaomi
+                                        </a>
+                                    </h5>
+                                    <!-- Product reviews-->
+                                    <div class="d-flex justify-content-center small text-warning mb-2">
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                    </div>
+                                    <!-- Product price-->
+                                    <a href="product.html" class="text-black" style="text-decoration: none;">
+                                        <span class="text-muted text-decoration-line-through">1 900 ₽</span>
+                                        1 043 ₽
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- Product actions-->
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <div class="text-center">
+                                    <a class="btn btn-outline-dark mt-auto" href="#">
+                                        Добавить в корзину
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-5">
+                        <div class="card h-100">
+                            <!-- Compare badge-->
+                            <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">
+                                <a href="#" style="text-decoration: none;" class="text-white">
+                                    <i class="bi bi-arrow-left-right"></i>
+                                </a>
+                            </div>
+                            <!-- Sale badge-->
+                            <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 3.0rem">
+                                Sale
+                            </div>
+                            <!-- Product image-->
+                            <a href="product.html">
+                                <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg"
+                                     alt="..."/>
+                            </a>
+                            <!-- Product details-->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <h5 class="fw-bolder">
+                                        <a href="product.html" class="text-black" style="text-decoration: none;">
+                                            Матрас Corretto Bella
+                                        </a>
+                                    </h5>
+                                    <!-- Product price-->
+                                    <a href="product.html" class="text-black" style="text-decoration: none;">
+                                        <span class="text-muted text-decoration-line-through">14 775 ₽</span>
+                                        8 865 ₽
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- Product actions-->
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <div class="text-center">
+                                    <a class="btn btn-outline-dark mt-auto" href="#">
+                                        Добавить в корзину
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-5">
+                        <div class="card h-100">
+                            <!-- Compare badge-->
+                            <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">
+                                <a href="#" style="text-decoration: none;" class="text-white">
+                                    <i class="bi bi-arrow-left-right"></i>
+                                </a>
+                            </div>
+                            <!-- Sale badge-->
+                            <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 3.0rem">
+                                Sale
+                            </div>
+                            <!-- Product image-->
+                            <a href="product.html">
+                                <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg"
+                                     alt="..."/>
+                            </a>
+                            <!-- Product details-->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <h5 class="fw-bolder">
+                                        <a href="product.html" class="text-black" style="text-decoration: none;">
+                                            Робот-пылесос Xiaomi Robot Vacuum E10
+                                        </a>
+                                    </h5>
+                                    <!-- Product reviews-->
+                                    <div class="d-flex justify-content-center small text-warning mb-2">
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star"></div>
+                                        <div class="bi-star"></div>
+                                    </div>
+                                    <!-- Product price-->
+                                    <a href="product.html" class="text-black" style="text-decoration: none;">
+                                        <span class="text-muted text-decoration-line-through">18 862 ₽</span>
+                                        13 447 ₽
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- Product actions-->
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <div class="text-center">
+                                    <a class="btn btn-outline-dark mt-auto" href="#">
+                                        Добавить в корзину
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Pagination-->
+                <nav aria-label="Pagination">
+                    <hr class="my-0"/>
+                    <ul class="pagination justify-content-center my-4">
+                        <li class="page-item disabled">
+                            <a class="page-link text-dark" href="#" tabindex="-1" aria-disabled="true">
+                                &laquo;
+                            </a>
+                        </li>
+                        <li class="page-item" aria-current="page">
+                            <a class="page-link text-dark" href="#!">1</a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link text-dark" href="#!">2</a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link text-dark" href="#!">3</a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link text-dark" href="#!">4</a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link text-dark" href="#!">5</a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link text-dark" href="#!">
+                                &raquo;
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Footer-->
+<footer class="py-5 bg-dark">
+    <div class="container"><p class="m-0 text-center text-white">Copyright &copy; Skillbox Market 2023</p></div>
+</footer>
+<!-- Bootstrap core JS-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Core theme JS-->
+<script src="../static/js/scripts.js"></script>
+</body>
+</html>
