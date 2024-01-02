@@ -823,10 +823,10 @@
 <!--Custom script -->
 <script>
     document.addEventListener('DOMContentLoaded', function () {
-        var endTime = new Date("{{ end_time|date:'Y-m-d H:i:s' }}").getTime(); // Время окончания в UTC
-        var timer = setInterval(function () {
-            var now = Date.now(); // Текущее время в UTC
-            var distance = endTime - now;
+        let endTime = new Date("{{ daily_special_timer|date:'Y-m-d H:i:s' }}").getTime(); // Время окончания в UTC
+        let timer = setInterval(function () {
+            let now = Date.now(); // Текущее время в UTC
+            let distance = endTime - now;
 
             // Если время истекло, установить distance в 0
             if (distance < 0) {
@@ -834,13 +834,13 @@
             }
 
             // Расчет дней, часов, минут и секунд
-            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            let days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            let seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
             // Формирование строки таймера
-            var timerString = "";
+            let timerString = "";
             if (days > 0) {
                 timerString += days + "д ";
             }
