@@ -23,3 +23,8 @@
     color: grey;
     text-decoration: none;
 }
+
+.active-pagination {
+    background-color: #eaecef;
+    border-color: #dee2e6;
+}
